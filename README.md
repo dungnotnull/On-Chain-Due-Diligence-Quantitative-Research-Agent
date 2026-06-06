@@ -11,7 +11,7 @@ Unlike many AI tools that rely on black-box predictions, ChainLens is built on a
 ### ?? Deterministic Audit Engine
 *   **Risk Heuristics:** Analyzes ownership, mint authority, honeypot patterns, liquidity locks, and blacklist/pausable functions.
 *   **Evidence-Based:** Every finding is labeled as a **fact** and attached to a citation (transaction hash, contract address, or source line).
-*   **Risk Scoring:** Generates a transparent 0–100 risk score based on configurable weights.
+*   **Risk Scoring:** Generates a transparent 0-100 risk score based on configurable weights.
 
 ### ?? Quantitative Metrics Engine
 *   **Closed-Form Math:** Computes volatility, log returns, Maximum Drawdown (MDD), Sharpe Ratio, and Value-at-Risk (VaR) using NumPy/pandas.
@@ -101,6 +101,9 @@ ChainLens is built for high-stakes environments where accuracy is paramount:
 - **Transparency:** Every metric output includes the lookback window, sample size, and data source.
 
 ---
+
+## ?? Author
+Created by **Codex**.
 
 ## ?? License
 MIT License. See `LICENSE` for details.
