@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project outputs (reports)
+outputs/*.md
+
+# Cache / temp
+.cache/
+tmp/
+*.log
+
+# Type checking
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Knowledge crawl data
+knowledge/gatekeeper/quarantine/
+
+# Monitoring data
+monitoring/data/
+
+# Leftover artifact
+chainlens_agents/

@@ -1,0 +1,87 @@
+[project]
+name = "chainlens"
+version = "0.1.0"
+description = "Production-grade on-chain due-diligence and quantitative research agent"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "ChainLens Contributors" },
+]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "pydantic>=2.5",
+    "httpx>=0.26",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+    "typer>=0.9",
+    "orjson>=3.9",
+    "tenacity>=8.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+chainlens = "chainlens.cli.main:app"
+chainlens-audit = "chainlens.cli.audit:app"
+chainlens-quant = "chainlens.cli.quant:app"
+chainlens-research = "chainlens.cli.research:app"
+chainlens-learn = "chainlens.cli.learn:app"
+chainlens-validate = "chainlens.cli.validate:app"
+chainlens-brain-crawl = "chainlens.cli.brain_crawl:app"
+chainlens-brain-review = "chainlens.cli.brain_review:app"
+chainlens-brain-status = "chainlens.cli.brain_status:app"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "ruff>=0.1",
+    "mypy>=1.7",
+    "hypothesis>=6.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "ARG", "C4"]
+ignore = ["D"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+ignore_missing_imports = true
+exclude = ["tests/", "outputs/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short --cov=src --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+]
