@@ -1,4 +1,4 @@
-# ??? ChainLens: On-Chain Due Diligence & Quantitative Research Agent
+# ChainLens: On-Chain Due Diligence & Quantitative Research Agent
 
 **ChainLens** is a production-grade agent designed for real traders, researchers, and analysts to perform rigorous due diligence on blockchain protocols, tokens, and smart contracts. 
 
@@ -6,30 +6,30 @@ Unlike many AI tools that rely on black-box predictions, ChainLens is built on a
 
 ---
 
-## ?? Core Capabilities
+## Core Capabilities
 
-### ?? Deterministic Audit Engine
+### Deterministic Audit Engine
 *   **Risk Heuristics:** Analyzes ownership, mint authority, honeypot patterns, liquidity locks, and blacklist/pausable functions.
 *   **Evidence-Based:** Every finding is labeled as a **fact** and attached to a citation (transaction hash, contract address, or source line).
 *   **Risk Scoring:** Generates a transparent 0-100 risk score based on configurable weights.
 
-### ?? Quantitative Metrics Engine
+### Quantitative Metrics Engine
 *   **Closed-Form Math:** Computes volatility, log returns, Maximum Drawdown (MDD), Sharpe Ratio, and Value-at-Risk (VaR) using NumPy/pandas.
 *   **Concentration Analysis:** Calculates Herfindahl-Hirschman Index (HHI) and Gini coefficients to assess holder distribution.
 *   **Rigor First:** Rejects calculations with insufficient sample sizes; strictly avoids price forecasting.
 
-### ?? Evolving Knowledge Core (Second Brain)
+### Evolving Knowledge Core (Second Brain)
 *   **Gated RAG:** A self-improving knowledge loop that crawls arXiv, IEEE, and audit reports.
 *   **Quality Gate:** Sources pass through a 7-step credibility and relevance filter before entering the "Brain."
 *   **Non-Mutating:** New knowledge contextualizes reports but never silently alters the deterministic core logic.
 
-### ?? Learn & Research Modes
+### Learn & Research Modes
 *   **Research Dossier:** Combines audit findings, quant metrics, and tokenomics into a unified research report.
 *   **Interactive Tutor:** Explains complex on-chain concepts and metrics with real-world, cited examples.
 
 ---
 
-## ??? Technical Architecture
+## Technical Architecture
 
 ```mermaid
 graph TD
@@ -54,7 +54,7 @@ graph TD
 
 ---
 
-## ?? Getting Started
+## Getting Started
 
 ### Installation
 ```bash
@@ -92,7 +92,7 @@ python -m chainlens.cli.brain_crawl
 
 ---
 
-## ?? Guardrails & Philosophy
+## Guardrails & Philosophy
 
 ChainLens is built for high-stakes environments where accuracy is paramount:
 - **No Advice:** It does NOT provide financial advice, trading signals, or price predictions.
@@ -102,8 +102,8 @@ ChainLens is built for high-stakes environments where accuracy is paramount:
 
 ---
 
-## ?? Author
+## Author
 Created by **Codex**.
 
-## ?? License
+## License
 MIT License. See `LICENSE` for details.
